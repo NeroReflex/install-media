@@ -207,7 +207,7 @@ timedatectl set-ntp true
 echo "Starting installer..."
 sleep 2
 
-TARGET="stable"
+TARGET="unstable"
 while ! ( curl --http1.1 -Ls https://github.com | grep '<html' > /dev/null ); do
     whiptail \
      "No internet connection detected.\n\nPlease use the network configuration tool to activate a network, then select \"Quit\" to exit the tool and continue the installation." \
