@@ -28,13 +28,12 @@ AUR_PACKAGES="\
     rtl8812au-dkms-git \
     rtl8814au-dkms-git \
     rtl8821au-dkms-git \
-    rz608-fix-git \
-    inputplumber-bin \
+    rz608-fix-git
 "
 
 ADDITIONAL_PACKAGES="\
-    https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.10.3-chos1-1/linux-chimeraos-6.10.3.chos1-1-x86_64.pkg.tar.zst \
-    https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.10.3-chos1-1/linux-chimeraos-headers-6.10.3.chos1-1-x86_64.pkg.tar.zst \
+    https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.12.1-chos1-2/linux-chimeraos-6.12.1.chos1-2-x86_64.pkg.tar.zst \
+    https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.12.1-chos1-2/linux-chimeraos-headers-6.12.1.chos1-2-x86_64.pkg.tar.zst \
 "
 
 # create repo directory if it doesn't exist yet
@@ -46,6 +45,8 @@ PIKAUR_RUN=(bash -c "${PIKAUR_CMD}")
 if [ -n "${BUILD_USER}" ]; then
 	PIKAUR_RUN=(su "${BUILD_USER}" -c "${PIKAUR_CMD}")
 fi
+
+pacman --noconfirm -S --overwrite '*' --disable-download-timeout ${PACKAGES}
 
 # build packages to the repo
 pushd /home/${BUILD_USER}
