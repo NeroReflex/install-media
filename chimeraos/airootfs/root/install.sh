@@ -239,6 +239,9 @@ fi
 
 export SHOW_UI=1
 export FRZR_INSTALLER=1
+export MOUNT_PATH="/tmp/frzr_root"
+export EFI_MOUNT_PATH="/tmp/frzr_root/efi"
+export SYSTEMD_RELAX_ESP_CHECKS=1
 
 # perform bootstrap of disk
 frzr bootstrap gamer /dev/${DISK}
