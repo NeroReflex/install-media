@@ -257,7 +257,7 @@ if [ -d ${SYS_CONN_DIR} ] && [ -n "$(ls -A ${SYS_CONN_DIR})" ]; then
         ${MOUNT_PATH}${SYS_CONN_DIR}/.
 fi
 
-frzr neroreflex/chimeraos:${TARGET}
+frzr deploy neroreflex/chimeraos:${TARGET}
 RESULT=$?
 
 MSG="Installation failed."
