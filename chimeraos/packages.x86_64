@@ -13,12 +13,11 @@ diffutils
 dosfstools
 efibootmgr
 git
-inputplumber-bin
 intel-ucode
 jq
 libnewt
-linux-chimeraos
-linux-chimeraos-headers
+linux-g14
+linux-g14-headers
 linux-firmware
 mkinitcpio
 mkinitcpio-archiso
@@ -31,3 +30,4 @@ usbutils
 wget
 zsh
 networkmanager
+inputplumber

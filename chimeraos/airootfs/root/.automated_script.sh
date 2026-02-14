@@ -30,5 +30,8 @@ automated_script ()
 }
 
 if [[ $(tty) == "/dev/tty1" ]]; then
-    automated_script
+    #automated_script
+
+    echo "Welcome to ChimeraOS Installer"
+    echo "To start the installation process, please run the '/root/install.sh' script."
 fi
